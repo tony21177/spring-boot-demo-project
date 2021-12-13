@@ -1,12 +1,6 @@
 package com.kun.demo.api.controller;
 
-import com.kun.common.api.CommonPage;
-import com.kun.common.api.CommonResult;
-import com.kun.demo.api.dto.PmsBrandDto;
-import com.kun.demo.api.service.DemoService;
-import com.kun.demo.model.PmsBrand;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import com.kun.demo.api.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,14 +10,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * 品牌管理示例controller
- */
-@Api(tags = "DemoController", description = "品牌管理示例接口")
 @Controller
 public class DemoController {
     @Autowired
-    private DemoService demoService;
+    private UserService userService;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DemoController.class);
 
